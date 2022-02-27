@@ -61,7 +61,7 @@ class App extends Component {
  }
 
  componentDidMount(){
-   fetch('http://localhost:3000')
+   fetch('https://lit-depths-97433.herokuapp.com')
     .then(response=>response.json())
     .then(data=>console.log(data));
  }
@@ -99,7 +99,7 @@ class App extends Component {
       .then(response=>{ 
         if(response.outputs[0].data.regions){
           console.log(response.outputs[0].data);
-            fetch('http://localhost:3000/image',{
+            fetch('https://lit-depths-97433.herokuapp.com/image',{
               method:'put',
               headers:{'Content-Type':'application/json'},
               body: JSON.stringify({
